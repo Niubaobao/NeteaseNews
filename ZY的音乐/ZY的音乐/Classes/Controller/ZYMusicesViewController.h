@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ZYMusicesViewController.h
 //  ZY的音乐
 //
 //  Created by 张亚超 on 15/10/30.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ZYMusicesViewController : UITableViewController
 
 @end
-
