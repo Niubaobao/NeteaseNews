@@ -11,8 +11,9 @@
 #import "ZYMusicTool.h"
 #import "ZYMusic.h"
 #import "HMAudioTool.h"
+#import "ZYLrcView.h"
 
-@interface ZYPlayingViewController ()
+@interface ZYPlayingViewController ()<AVAudioPlayerDelegate>
 //jilu 正在播放的音乐
 @property(nonatomic,strong)ZYMusic* playingMusic;
 
@@ -26,13 +27,28 @@
 //歌手的label
 @property (weak, nonatomic) IBOutlet UILabel *singerLabel;
 //歌手封面
+
+//歌词的view
+@property (weak, nonatomic) IBOutlet ZYLrcView *lrcView;
 @property (weak, nonatomic) IBOutlet UIImageView *singerIcon;
 //音乐总时长
 @property (weak, nonatomic) IBOutlet UILabel *totalTimeLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *sliderButton;
+//暂停播放按钮
+@property (weak, nonatomic) IBOutlet UIButton *playOrPauseButton;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *silderLeftConstraint;
+//暂停 播放
+- (IBAction)playOrPauseButtonClick;
+//上一首
+- (IBAction)previousButtonClick;
+//下一首
+- (IBAction)nextButtonClick:(id)sender;
+//歌词
 
+
+//点击歌词按钮
+- (IBAction)clicklrc:(UIButton *)sender;
 
 
 
@@ -94,18 +110,22 @@
     }
         self.playingMusic = playingMusic;
         
-//        设置界面数据
+//       1 设置界面数据
+//    1.1设置界面基本数据
         self.songLabel.text = playingMusic.name;
         self.singerLabel.text = playingMusic.singer;
         self.singerIcon.image = [UIImage imageNamed:playingMusic.icon];
+//    1.2设置歌词文件名称
+    self.lrcView.lrcname = playingMusic.lrcname;
 //        播放音乐
        
      self.player = [HMAudioTool playMusicWithName:playingMusic.filename];
         self.totalTimeLabel.text =[self stringWithTime:self.player.duration];
-//    添加控制器
+    self.player.delegate = self;
+//    添加定时器
     [self addProgressTimer];
     [self updateInfor];
-    
+    self.playOrPauseButton.selected = NO;
 
 
 }
@@ -134,7 +154,7 @@
 
 }
 -(void)updateInfor{
-    NSLog(@"更新数据");
+//    NSLog(@"更新数据");
 //    计算比方比例
     CGFloat progressRatio = self.player.currentTime / self.player.duration;
 //    gengxin滑块位置
@@ -159,4 +179,60 @@
 
 
 
+- (IBAction)playOrPauseButtonClick {
+    NSLog(@"hahahah");
+    self.playOrPauseButton.selected = !self.playOrPauseButton.selected;
+    if (self.player.playing) {
+        [self.player pause];
+        [self removeProgressTimer];
+    }else{
+        [self.player play];
+        [self addProgressTimer];
+    
+    }
+    
+    
+}
+//shangyishou上一首
+
+- (IBAction)previousButtonClick {
+    [self stopPlayingMusic];
+    [ZYMusicTool previousMusic];
+    [self startPlayingMusic];
+    
+}
+
+//下一首
+- (IBAction)nextButtonClick:(id)sender {
+    [self stopPlayingMusic];
+    [ZYMusicTool nextMusic];
+    [self startPlayingMusic];
+    
+}
+//打断的代理实现
+-(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
+    if (flag) {
+        [self nextButtonClick:nil];
+    }
+
+}
+-(void)audioPlayerBeginInterruption:(AVAudioPlayer *)player{
+    [self playOrPauseButtonClick];
+
+}
+//yinyue音乐播放打断结束时调用
+-(void)audioPlayerEndInterruption:(AVAudioPlayer *)player{
+    [self playOrPauseButtonClick];
+
+}
+//显示歌词的界面
+
+
+- (IBAction)clicklrc:(UIButton *)sender {
+    sender.selected = !sender.selected;
+//    self.lrcView.hidden = !self.lrcView.hidden;
+    self.lrcView.hidden = !self.lrcView.hidden;
+    
+
+}
 @end

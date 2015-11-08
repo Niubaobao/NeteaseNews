@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0019EF771BEAF8E300F446DC /* DRNRealTimeBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0019EF741BEAF8E300F446DC /* DRNRealTimeBlurView.m */; settings = {ASSET_TAGS = (); }; };
+		0019EF781BEAF8E300F446DC /* UIImage+BoxBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 0019EF761BEAF8E300F446DC /* UIImage+BoxBlur.m */; settings = {ASSET_TAGS = (); }; };
+		0019EF7B1BEAF9BA00F446DC /* ZYLrcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0019EF7A1BEAF9BA00F446DC /* ZYLrcView.m */; settings = {ASSET_TAGS = (); }; };
+		0019EF7E1BEB51B300F446DC /* ZYLrcCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0019EF7D1BEB51B300F446DC /* ZYLrcCell.m */; settings = {ASSET_TAGS = (); }; };
+		0019EF811BEBC35100F446DC /* ZYlrcLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0019EF801BEBC35100F446DC /* ZYlrcLine.m */; settings = {ASSET_TAGS = (); }; };
 		003B9CEA1BE8D32200E27B2A /* HMAudioTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 003B9CE91BE8D32200E27B2A /* HMAudioTool.m */; settings = {ASSET_TAGS = (); }; };
 		00429D991BE788B7008C458A /* UIImage+Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 00429D961BE788B7008C458A /* UIImage+Circle.m */; settings = {ASSET_TAGS = (); }; };
 		00429D9A1BE788B7008C458A /* UIView+AdjustFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 00429D981BE788B7008C458A /* UIView+AdjustFrame.m */; settings = {ASSET_TAGS = (); }; };
@@ -73,6 +78,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0019EF731BEAF8E300F446DC /* DRNRealTimeBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRNRealTimeBlurView.h; sourceTree = "<group>"; };
+		0019EF741BEAF8E300F446DC /* DRNRealTimeBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRNRealTimeBlurView.m; sourceTree = "<group>"; };
+		0019EF751BEAF8E300F446DC /* UIImage+BoxBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BoxBlur.h"; sourceTree = "<group>"; };
+		0019EF761BEAF8E300F446DC /* UIImage+BoxBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BoxBlur.m"; sourceTree = "<group>"; };
+		0019EF791BEAF9BA00F446DC /* ZYLrcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYLrcView.h; sourceTree = "<group>"; };
+		0019EF7A1BEAF9BA00F446DC /* ZYLrcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYLrcView.m; sourceTree = "<group>"; };
+		0019EF7C1BEB51B300F446DC /* ZYLrcCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYLrcCell.h; sourceTree = "<group>"; };
+		0019EF7D1BEB51B300F446DC /* ZYLrcCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYLrcCell.m; sourceTree = "<group>"; };
+		0019EF7F1BEBC35100F446DC /* ZYlrcLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYlrcLine.h; sourceTree = "<group>"; };
+		0019EF801BEBC35100F446DC /* ZYlrcLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYlrcLine.m; sourceTree = "<group>"; };
 		003B9CE81BE8D32200E27B2A /* HMAudioTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMAudioTool.h; sourceTree = "<group>"; };
 		003B9CE91BE8D32200E27B2A /* HMAudioTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMAudioTool.m; sourceTree = "<group>"; };
 		00429D951BE788B7008C458A /* UIImage+Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Circle.h"; sourceTree = "<group>"; };
@@ -169,6 +184,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0019EF721BEAF8E300F446DC /* DRNRealTimeBlur */ = {
+			isa = PBXGroup;
+			children = (
+				0019EF731BEAF8E300F446DC /* DRNRealTimeBlurView.h */,
+				0019EF741BEAF8E300F446DC /* DRNRealTimeBlurView.m */,
+				0019EF751BEAF8E300F446DC /* UIImage+BoxBlur.h */,
+				0019EF761BEAF8E300F446DC /* UIImage+BoxBlur.m */,
+			);
+			path = DRNRealTimeBlur;
+			sourceTree = "<group>";
+		};
 		00429D941BE788B7008C458A /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +299,8 @@
 			children = (
 				00DA29A51BE4D88000FC5F9C /* ZYMusic.h */,
 				00DA29A61BE4D88000FC5F9C /* ZYMusic.m */,
+				0019EF7F1BEBC35100F446DC /* ZYlrcLine.h */,
+				0019EF801BEBC35100F446DC /* ZYlrcLine.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -280,6 +308,7 @@
 		00E4BC9B1BE38A6500DF18E1 /* other */ = {
 			isa = PBXGroup;
 			children = (
+				0019EF721BEAF8E300F446DC /* DRNRealTimeBlur */,
 				00429D941BE788B7008C458A /* Category */,
 				00DA29A81BE4DE8C00FC5F9C /* MJExtension */,
 				00E4BC841BE3808C00DF18E1 /* AppDelegate.h */,
@@ -302,6 +331,10 @@
 		00E4BC9D1BE38A6500DF18E1 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				0019EF791BEAF9BA00F446DC /* ZYLrcView.h */,
+				0019EF7A1BEAF9BA00F446DC /* ZYLrcView.m */,
+				0019EF7C1BEB51B300F446DC /* ZYLrcCell.h */,
+				0019EF7D1BEB51B300F446DC /* ZYLrcCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -494,21 +527,26 @@
 			files = (
 				00429DA11BE7BE87008C458A /* ZYMusicTool.m in Sources */,
 				00DA29BD1BE4DE8C00FC5F9C /* MJIvar.m in Sources */,
+				0019EF7B1BEAF9BA00F446DC /* ZYLrcView.m in Sources */,
 				00429D991BE788B7008C458A /* UIImage+Circle.m in Sources */,
 				00DA29C01BE4DE8C00FC5F9C /* MJType.m in Sources */,
+				0019EF771BEAF8E300F446DC /* DRNRealTimeBlurView.m in Sources */,
 				00DA29A71BE4D88000FC5F9C /* ZYMusic.m in Sources */,
 				00DA29BC1BE4DE8C00FC5F9C /* MJArgument.m in Sources */,
 				00DA29C31BE4DE8C00FC5F9C /* NSObject+MJKeyValue.m in Sources */,
+				0019EF811BEBC35100F446DC /* ZYlrcLine.m in Sources */,
 				00E4BC861BE3808C00DF18E1 /* AppDelegate.m in Sources */,
 				00DA29C11BE4DE8C00FC5F9C /* MJTypeEncoding.m in Sources */,
 				00DA29C21BE4DE8C00FC5F9C /* NSObject+MJCoding.m in Sources */,
 				00429D9A1BE788B7008C458A /* UIView+AdjustFrame.m in Sources */,
 				00DA29BE1BE4DE8C00FC5F9C /* MJMember.m in Sources */,
+				0019EF7E1BEB51B300F446DC /* ZYLrcCell.m in Sources */,
 				00DA29BF1BE4DE8C00FC5F9C /* MJMethod.m in Sources */,
 				00E4BCA01BE397E500DF18E1 /* ZYMusicesViewController.m in Sources */,
 				00E4BC831BE3808C00DF18E1 /* main.m in Sources */,
 				00DA29C81BE6394000FC5F9C /* ZYPlayingViewController.m in Sources */,
 				00DA29C41BE4DE8C00FC5F9C /* NSObject+MJMember.m in Sources */,
+				0019EF781BEAF8E300F446DC /* UIImage+BoxBlur.m in Sources */,
 				003B9CEA1BE8D32200E27B2A /* HMAudioTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
