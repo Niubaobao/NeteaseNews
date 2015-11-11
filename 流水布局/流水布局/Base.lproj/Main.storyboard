@@ -13,22 +13,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8bc-XT-xNm">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="200" height="300"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Exj-Cq-R5h">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ClothesCell" id="Exj-Cq-R5h" customClass="ZYClothesCell">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2ct-oY-ods">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                                            <animations/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcJ-g7-B2N">
+                                            <rect key="frame" x="8" y="271" width="184" height="21"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="1" green="0.51252129245275624" blue="0.062439333090480109" alpha="0.3872466216216216" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="DCE-8f-EUK"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstItem="AcJ-g7-B2N" firstAttribute="leading" secondItem="Exj-Cq-R5h" secondAttribute="leading" constant="8" id="185-el-iav"/>
+                                    <constraint firstItem="2ct-oY-ods" firstAttribute="leading" secondItem="Exj-Cq-R5h" secondAttribute="leading" id="AWw-nd-1Vj"/>
+                                    <constraint firstAttribute="bottom" secondItem="AcJ-g7-B2N" secondAttribute="bottom" constant="8" id="Edg-yy-0vY"/>
+                                    <constraint firstAttribute="trailing" secondItem="2ct-oY-ods" secondAttribute="trailing" id="JNT-GS-8Nm"/>
+                                    <constraint firstItem="2ct-oY-ods" firstAttribute="top" secondItem="Exj-Cq-R5h" secondAttribute="top" id="KwN-tV-VIe"/>
+                                    <constraint firstAttribute="bottom" secondItem="2ct-oY-ods" secondAttribute="bottom" id="VvE-mi-ZI1"/>
+                                    <constraint firstAttribute="trailing" secondItem="AcJ-g7-B2N" secondAttribute="trailing" constant="8" id="sv9-4Z-E3X"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="ClothesPriceLabel" destination="AcJ-g7-B2N" id="fjm-op-d7K"/>
+                                    <outlet property="ClothesView" destination="2ct-oY-ods" id="vbb-kQ-vFh"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -39,7 +69,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AvO-RA-eXO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="264" y="82"/>
+            <point key="canvasLocation" x="3" y="9"/>
         </scene>
     </scenes>
 </document>

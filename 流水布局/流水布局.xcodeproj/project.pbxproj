@@ -14,6 +14,9 @@
 		0066C5C51BECC290001E30F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0066C5C31BECC290001E30F2 /* LaunchScreen.storyboard */; };
 		0066C5CE1BECC52E001E30F2 /* ZYClothesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0066C5CD1BECC52E001E30F2 /* ZYClothesViewController.m */; };
 		0066C5D11BECC823001E30F2 /* ZYWaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0066C5D01BECC823001E30F2 /* ZYWaterFlowLayout.m */; };
+		00F7F5E81BEF613A00F81FEB /* clothes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00F7F5E71BEF613A00F81FEB /* clothes.plist */; settings = {ASSET_TAGS = (); }; };
+		00F7F5EB1BEF616400F81FEB /* ZYClothes.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F7F5EA1BEF616400F81FEB /* ZYClothes.m */; settings = {ASSET_TAGS = (); }; };
+		00F7F5EE1BEF625400F81FEB /* ZYClothesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F7F5ED1BEF625400F81FEB /* ZYClothesCell.m */; settings = {ASSET_TAGS = (); }; };
 		4C615436AF8398B0731E7A4D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 042363928B1332AF67D5D1F1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +33,11 @@
 		0066C5CD1BECC52E001E30F2 /* ZYClothesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYClothesViewController.m; sourceTree = "<group>"; };
 		0066C5CF1BECC823001E30F2 /* ZYWaterFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYWaterFlowLayout.h; sourceTree = "<group>"; };
 		0066C5D01BECC823001E30F2 /* ZYWaterFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYWaterFlowLayout.m; sourceTree = "<group>"; };
+		00F7F5E71BEF613A00F81FEB /* clothes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = clothes.plist; sourceTree = "<group>"; };
+		00F7F5E91BEF616400F81FEB /* ZYClothes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYClothes.h; sourceTree = "<group>"; };
+		00F7F5EA1BEF616400F81FEB /* ZYClothes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYClothes.m; sourceTree = "<group>"; };
+		00F7F5EC1BEF625400F81FEB /* ZYClothesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYClothesCell.h; sourceTree = "<group>"; };
+		00F7F5ED1BEF625400F81FEB /* ZYClothesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYClothesCell.m; sourceTree = "<group>"; };
 		042363928B1332AF67D5D1F1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		925DD73C984842C39A77B225 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9C6F3114446776D90BB1C827 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -68,15 +76,20 @@
 		0066C5B41BECC290001E30F2 /* 流水布局 */ = {
 			isa = PBXGroup;
 			children = (
-				0066C5B81BECC290001E30F2 /* AppDelegate.h */,
-				0066C5B91BECC290001E30F2 /* AppDelegate.m */,
+				00F7F5EC1BEF625400F81FEB /* ZYClothesCell.h */,
+				00F7F5ED1BEF625400F81FEB /* ZYClothesCell.m */,
+				00F7F5E91BEF616400F81FEB /* ZYClothes.h */,
+				00F7F5EA1BEF616400F81FEB /* ZYClothes.m */,
 				0066C5CF1BECC823001E30F2 /* ZYWaterFlowLayout.h */,
 				0066C5D01BECC823001E30F2 /* ZYWaterFlowLayout.m */,
 				0066C5CC1BECC52E001E30F2 /* ZYClothesViewController.h */,
 				0066C5CD1BECC52E001E30F2 /* ZYClothesViewController.m */,
 				0066C5BE1BECC290001E30F2 /* Main.storyboard */,
+				0066C5B81BECC290001E30F2 /* AppDelegate.h */,
+				0066C5B91BECC290001E30F2 /* AppDelegate.m */,
 				0066C5C11BECC290001E30F2 /* Assets.xcassets */,
 				0066C5C31BECC290001E30F2 /* LaunchScreen.storyboard */,
+				00F7F5E71BEF613A00F81FEB /* clothes.plist */,
 				0066C5C61BECC290001E30F2 /* Info.plist */,
 				0066C5B51BECC290001E30F2 /* Supporting Files */,
 			);
@@ -170,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0066C5C51BECC290001E30F2 /* LaunchScreen.storyboard in Resources */,
+				00F7F5E81BEF613A00F81FEB /* clothes.plist in Resources */,
 				0066C5C21BECC290001E30F2 /* Assets.xcassets in Resources */,
 				0066C5C01BECC290001E30F2 /* Main.storyboard in Resources */,
 			);
@@ -230,8 +244,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00F7F5EB1BEF616400F81FEB /* ZYClothes.m in Sources */,
 				0066C5CE1BECC52E001E30F2 /* ZYClothesViewController.m in Sources */,
 				0066C5BA1BECC290001E30F2 /* AppDelegate.m in Sources */,
+				00F7F5EE1BEF625400F81FEB /* ZYClothesCell.m in Sources */,
 				0066C5D11BECC823001E30F2 /* ZYWaterFlowLayout.m in Sources */,
 				0066C5B71BECC290001E30F2 /* main.m in Sources */,
 			);

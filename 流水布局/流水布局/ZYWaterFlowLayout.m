@@ -22,11 +22,17 @@ static const NSUInteger ZYDefaultColumnCount = 3;
 @property(nonatomic,strong)NSMutableArray *MaxYArray;
 //存所有cell的布局属性
 @property(nonatomic,strong)NSMutableArray *attrsArray;
+// 声明get方法
+- (CGFloat)rowSpacing;
+- (NSInteger)columnSpacing;
+- (UIEdgeInsets)edgeInsets;
+- (NSUInteger)columnCount;
 @end
 
 
 
 @implementation ZYWaterFlowLayout
+//oooo
 
 //懒加载
 -(NSMutableArray *)MaxYArray{
@@ -113,7 +119,7 @@ static const NSUInteger ZYDefaultColumnCount = 3;
     CGFloat totalColumnSpacing = (ZYDefaultColumnCount - 1) * ZYDefaultColumnSpacing;
     CGFloat width = (ZYCollectionViewWidth - ZYDefaultEdgeInsets.left - ZYDefaultEdgeInsets.right - totalColumnSpacing) / ZYDefaultColumnCount;
     
-    CGFloat height = 50 + arc4random_uniform(150);
+    CGFloat height = [self.delegate waterFlowLayout:self heightForItemAtIndexPath:indexPath WithItemWidth:width];
     CGFloat X = ZYDefaultEdgeInsets.left + destIndex * (width + ZYDefaultColumnSpacing );
     
     CGFloat Y = destMaxY + ZYDefaultRowSpacing;
@@ -125,6 +131,35 @@ static const NSUInteger ZYDefaultColumnCount = 3;
     
     return attrs;
 
+}
+// 声明get方法
+- (CGFloat)rowSpacing{
+    if ([self.delegate respondsToSelector:@selector(rowSpacingInWaterFlowLayout:)]) {
+        return [self.delegate rowSpacingInWaterFlowLayout:self];
+    }
+    return ZYDefaultRowSpacing;
+}
+
+
+- (NSInteger)columnSpacing{
+    if ([self.delegate respondsToSelector:@selector(columnSpacingInWaterFlowLayout:)]) {
+        return [self.delegate columnSpacingInWaterFlowLayout:self];
+    }
+    return ZYDefaultColumnSpacing;
+
+}
+- (UIEdgeInsets)edgeInsets{
+    if ([self.delegate respondsToSelector:@selector(edgeInsetsInWaterFlowLayout:)]) {
+        return [self.delegate edgeInsetsInWaterFlowLayout:self];
+    }
+    return ZYDefaultEdgeInsets;
+    
+}
+- (NSUInteger)columnCount{
+    if ([self.delegate respondsToSelector:@selector(columnCountInWaterFlowLayout:)]) {
+        return [self.delegate columnCountInWaterFlowLayout:self];
+    }
+    return ZYDefaultColumnCount;
 }
 
 
